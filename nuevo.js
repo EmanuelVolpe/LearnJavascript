@@ -1,10 +1,13 @@
-const numbers = [4, 2, 5, 8];
+const grades = [4, 2, 5, 19, 20];
 
-const doubled = numbers.map(function (number) {
-    return number * 2;
-});
-console.log(doubled); // [8, 4, 10, 16]
-console.log(numbers)
+function getRaisedGrades(grades) {
+    // TODO: return all the grades raised by 1 (no grade should exceed 20)
+    let arreglo = grades.map(function (grade) {
+        if (grade < 20)
+            return ++grade
+        return 20
+    })
+    return arreglo;
+}
 
-const groceries = ["Apple", "Peach", "Tomato"];
-console.log(groceries.toString()); // "Apple,Peach,Tomato"
+console.log(getRaisedGrades(grades));
